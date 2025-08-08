@@ -17,23 +17,29 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
+    console.log('ThemeProvider: Checking for saved theme...');
     // Check for saved theme preference or default to 'dark'
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
     const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    console.log('ThemeProvider: Initial theme will be:', initialTheme);
     setTheme(initialTheme);
   }, []);
 
   useEffect(() => {
+    console.log('ThemeProvider: Applying theme to document:', theme);
     // Apply theme to document
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(theme);
     localStorage.setItem('theme', theme);
+    console.log('ThemeProvider: Document classes:', document.documentElement.className);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    console.log('ThemeProvider: Toggling theme from', theme, 'to', newTheme);
+    setTheme(newTheme);
   };
 
   return (

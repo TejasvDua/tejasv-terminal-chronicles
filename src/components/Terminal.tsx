@@ -9,6 +9,7 @@ interface CommandOutput {
 }
 
 export function Terminal() {
+  console.log('Terminal component rendering');
   const { theme, toggleTheme } = useTheme();
   const [currentInput, setCurrentInput] = useState('');
   const [history, setHistory] = useState<CommandOutput[]>([]);
@@ -281,6 +282,7 @@ Type 'help' to see all available commands.`;
 
   // Welcome message
   useEffect(() => {
+    console.log('Terminal component mounted, setting up welcome message');
     const welcomeMessage = `Welcome to ${resumeData.name}'s Portfolio Terminal!
 
 Type 'help' to see available commands or 'about' to get started.
@@ -291,8 +293,11 @@ Type 'help' to see available commands or 'about' to get started.
       output: welcomeMessage,
       type: 'success'
     }]);
+    console.log('Welcome message set, history length:', 1);
   }, []);
 
+  console.log('About to render Terminal JSX, history length:', history.length);
+  
   return (
     <div className="min-h-screen bg-background p-4 flex items-center justify-center">
       <div className="w-full max-w-4xl">
