@@ -1,13 +1,16 @@
-import { Terminal } from '@/components/Terminal';
-
 const Index = () => {
-  console.log('Index page rendering');
   return (
-    <div>
-      <h1 style={{color: 'red', fontSize: '50px', background: 'white', padding: '20px'}}>
-        TEST - Can you see this red text?
-      </h1>
-      <Terminal />
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: 'red',
+      color: 'white',
+      fontSize: '30px',
+      fontWeight: 'bold'
+    }}>
+      HELLO WORLD - CAN YOU SEE THIS?
     </div>
   );
 };
