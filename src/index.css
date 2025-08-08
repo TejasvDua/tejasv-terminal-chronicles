@@ -191,7 +191,10 @@
 
   /* Theme toggle button */
   .theme-toggle {
-    @apply p-2 rounded-md border border-terminal-border bg-terminal-bg text-terminal-text hover:bg-terminal-border transition-colors;
+    @apply p-2 rounded-md border border-terminal-border bg-terminal-bg text-terminal-text transition-colors;
+  }
+  .theme-toggle:hover {
+    background-color: hsl(var(--terminal-border));
   }
 
   /* Command input */
