@@ -240,6 +240,7 @@
   /* Terminal colors for syntax highlighting */
   .text-terminal-bg { color: hsl(var(--terminal-bg)); }
   .bg-terminal-bg { background-color: hsl(var(--terminal-bg)); }
+  .bg-terminal-text { background-color: hsl(var(--terminal-text)); }
   .text-terminal-text { color: hsl(var(--terminal-text)); }
   .text-terminal-prompt { color: hsl(var(--terminal-prompt)); }
   .text-terminal-command { color: hsl(var(--terminal-command)); }
