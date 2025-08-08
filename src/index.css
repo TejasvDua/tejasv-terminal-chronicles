@@ -251,5 +251,6 @@
   .text-terminal-error { color: hsl(var(--terminal-error)); }
   .text-terminal-success { color: hsl(var(--terminal-success)); }
   .text-terminal-highlight { color: hsl(var(--terminal-highlight)); }
+  .caret-terminal-text { caret-color: hsl(var(--terminal-text)); }
   .border-terminal-border { border-color: hsl(var(--terminal-border)); }
 }
