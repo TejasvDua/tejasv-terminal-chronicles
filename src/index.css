@@ -32,7 +32,7 @@
     
     /* Terminal specific colors */
     --terminal-bg: 222 84% 5%;
-    --terminal-text: 0 0% 100%;
+    --terminal-text: 120 100% 50%;
     --terminal-prompt: 120 100% 50%;
     --terminal-input: 0 0% 100%;
     --terminal-error: 0 84% 60%;
@@ -68,7 +68,7 @@
     
     /* Terminal specific colors for dark mode */
     --terminal-bg: 222 84% 5%;
-    --terminal-text: 0 0% 100%;
+    --terminal-text: 120 100% 50%;
     --terminal-prompt: 120 100% 50%;
     --terminal-input: 0 0% 100%;
     --terminal-error: 0 84% 60%;
