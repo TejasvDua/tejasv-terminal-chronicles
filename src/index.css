@@ -100,6 +100,118 @@
   }
 }
 
+@layer components {
+  .terminal-container {
+    @apply bg-card border border-border rounded-lg shadow-lg overflow-hidden;
+    background: hsl(var(--terminal-bg));
+    border: 1px solid hsl(var(--border));
+  }
+
+  .terminal-header {
+    @apply flex items-center justify-between px-4 py-3 border-b border-border;
+    background: hsl(var(--terminal-bg));
+    border-bottom: 1px solid hsl(var(--border));
+    color: hsl(var(--terminal-text));
+  }
+
+  .terminal-controls {
+    @apply flex items-center space-x-2;
+  }
+
+  .terminal-button {
+    @apply w-3 h-3 rounded-full;
+  }
+
+  .terminal-button.close {
+    background: #ff5f56;
+  }
+
+  .terminal-button.minimize {
+    background: #ffbd2e;
+  }
+
+  .terminal-button.maximize {
+    background: #27ca3f;
+  }
+
+  .theme-toggle {
+    @apply p-2 rounded-md transition-colors;
+    color: hsl(var(--terminal-text));
+  }
+
+  .theme-toggle:hover {
+    background: hsl(var(--muted));
+  }
+
+  .terminal-content {
+    @apply p-4 h-96 overflow-y-auto font-mono text-sm leading-relaxed terminal-scrollbar;
+    background: hsl(var(--terminal-bg));
+    color: hsl(var(--terminal-text));
+  }
+
+  .terminal-prompt {
+    color: hsl(var(--terminal-prompt));
+    font-weight: 600;
+  }
+
+  .terminal-command {
+    color: hsl(var(--terminal-input));
+  }
+
+  .command-input {
+    @apply bg-transparent border-none outline-none flex-1 font-mono text-sm caret-terminal-text;
+    color: hsl(var(--terminal-input));
+  }
+
+  .command-input::placeholder {
+    color: hsl(var(--muted-foreground));
+  }
+
+  .terminal-output {
+    color: hsl(var(--terminal-text));
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .terminal-success {
+    color: hsl(var(--terminal-success));
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .terminal-error {
+    color: hsl(var(--terminal-error));
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .typing-cursor {
+    @apply inline-block w-2 h-5 ml-1;
+    background: hsl(var(--terminal-text));
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-out;
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Courier New', monospace;
