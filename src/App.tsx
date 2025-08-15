@@ -1,7 +1,12 @@
-import Index from "./pages/Index";
+import { ThemeProvider } from "./hooks/useTheme";
+import { Terminal } from "./components/Terminal";
 
 const App = () => {
-  return <Index />;
+  return (
+    <ThemeProvider>
+      <Terminal />
+    </ThemeProvider>
+  );
 };
 
 export default App;
