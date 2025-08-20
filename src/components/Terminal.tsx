@@ -151,10 +151,10 @@ Key Focus Areas:
 
     contact: () => `📞 Contact Information:
 
-📧 Email: ${resumeData.email}
+📧 Email: dua.tejasv@gmail.com
 🌐 GitHub: github.com/tejasvdua
 💼 LinkedIn: linkedin.com/in/tejasvdua
-📱 Portfolio: tejasvdua.dev
+📱 Phone no.: +91 7987826177
 
 Feel free to reach out for collaborations, opportunities, or just to chat about cybersecurity and technology!`,
 
